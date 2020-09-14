@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid ">
+    <h1 class="text-center my-4" style="text-decoration: underline;">Single Images are here.</h1>
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4 animated fadeInLeft">
+            <img src='' class="img-fluid z-depth-1-half" alt="">
+        </div>
+        <!--Grid column-->
+        <div class="card-body my-5">
+            <h5 class="card-title">Image Name</h5>
+            <hr>
+            <!-- Text -->
+            <ul class=" card-text list-group list-group-flush" style="width: 500px;">
+                <li class="list-group-item animated fadeInRight"> <i class="fas fa-audio-description"></i> Decstiption: {{studi.image_description}}</li>
+                <li class="list-group-item animated fadeInRight"> <i class="fas fa-search-location"></i> Location: {{studi.location}}</li>
+                <li class="list-group-item animated fadeInRight"> <i class="fas fa-copy"></i> Copy:
+                    <input type="text" value=" " id="myInput">
+                    <button type="button" class="btn btn-dark-green" onclick="myFunction()">Copy Url</button>
+
+                </li>
+                <script>
+                    function myFunction() {
+                        var copyText = document.getElementById("myInput");
+                        copyText.select();
+                        document.execCommand("Copy");
+                    }
+                </script>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

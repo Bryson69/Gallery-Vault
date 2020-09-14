@@ -1,0 +1,11 @@
+#particles-js {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/mountains.jpg);
+    height: 95vh;
+    background-position: center;
+    background-size: cover;
+    color: snow;
+}
+
+.container{
+    margin-top: 125px;
+}
