@@ -1,25 +1,27 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container-fluid">
+    <div class="d-flex justify-content-start"><a href="{% url 'showcase' %}" class="card-link"><button type="button" class="btn btn-primary">Back</button></a></div>
 
-{% block content %}
-<div class="container-fluid ">
-    <h1 class="text-center my-4" style="text-decoration: underline;">Single Images are here.</h1>
+    <div class="d-flex justify-content-center">
+        <h1 class="text-center my-5" id="con">
+            <h1 class="text-center my-4" id="con">Single Images are here.</h1>
+        </h1>
+    </div>
+
     <div class="row">
-
-        <!--Grid column-->
-        <div class="col-md-6 mb-4 animated fadeInLeft">
-            <img src='' class="img-fluid z-depth-1-half" alt="">
+        <div class="col-md-6 mb-4 animate__animated animate__fadeInLeftBig">
+            <img src='{{image.image.url}}' class="img-fluid z-depth-1-half" alt="">
         </div>
         <!--Grid column-->
         <div class="card-body my-5">
-            <h5 class="card-title">Image Name</h5>
+            <h5 class="card-title"> {{image.name|upper}}</h5>
             <hr>
             <!-- Text -->
-            <ul class=" card-text list-group list-group-flush" style="width: 500px;">
-                <li class="list-group-item animated fadeInRight"> <i class="fas fa-audio-description"></i> Decstiption: {{studi.image_description}}</li>
-                <li class="list-group-item animated fadeInRight"> <i class="fas fa-search-location"></i> Location: {{studi.location}}</li>
-                <li class="list-group-item animated fadeInRight"> <i class="fas fa-copy"></i> Copy:
-                    <input type="text" value=" " id="myInput">
+            <ul class=" card-text list-group list-group-flush animate__animated animate__fadeInRight" style="width: 500px;">
+                <li class="list-group-item"> <i class="fas fa-audio-description"></i> Decstiption: {{image.descripton}}</li>
+                <li class="list-group-item"> <i class="fas fa-search-location"></i> Location: {{image.location}}</li>
+                <li class="list-group-item"> <i class="fas fa-copy"></i> Copy:
+                    <input class="form-control" type="text" value="{{image.image}}" id="myInput">
                     <button type="button" class="btn btn-dark-green" onclick="myFunction()">Copy Url</button>
 
                 </li>
@@ -34,6 +36,7 @@
         </div>
     </div>
 </div>
+
 </div>
 
 {% endblock %}
