@@ -1,22 +1,43 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
-<div class="container-fluid" id="con">
-    <h1 class="text-center my-4 ml-5" style="text-decoration: underline;">The Vault.</h1>
+<style>
+    .container-fluid {
+        background-color: rgb(75, 70, 70);
+        height: 500vh;
+    }
+    
+    #transparent {
+        background-color: transparent;
+    }
+    
+    h5 {
+        color: snow;
+        letter-spacing: 5px;
+        font-family: 'Courier New', Courier, monospace;
+        -webkit-text-decoration-color: salmon;
+        text-decoration-color: rgb(139, 94, 88);
+        -webkit-text-decoration-style: wavy;
+        text-decoration-style: wavy;
+    }
+</style>
+<div class="container-fluid">
+    <div class="d-flex justify-content-start">
+        <h1 class="text-center my-5 ml-5" id="con" style="color: snow;">The Vault.</h1>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <h1 class="text-center my-5" id="con" style="color: snow;">The Vault.</h1>
+    </div>
     <div class="row">
-        <div class="col-sm-4">
-            <div class="card my-3 ml-4" style="width: 25rem;">
-                <img src="">
+        {% for image_item in images %}
+        <div class="col-sm-4  animate__animated animate__fadeIn animate__delay-2s">
+            <div class="card" style="width: 25rem;" id="transparent">
+                <img src="{{ image_item.image.url }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text">
-                        <p></p>
-                    </p>
+                    <h5 class="card-title ml-2">{{ image_item.name }}</h5>
+                    <a href="{% url 'show' image_item.id %}" class=" my-3 card-link animate__animated animate__flash animate__infinite	infinite"><button type="button" class="btn btn-deep-orange animate__animated animate__animate__fadeIn animate__infinite	infinite">View</button></a>
                 </div>
-                <div class="card-body">
-                    <a href="" class="card-link"><button type="button" class="btn btn-sm btn-primary">View more</button></a>
-                </div>
+
             </div>
         </div>
-    </div>
-</div>
-{% endblock %}
+        {% endfor %} {% endblock %}
