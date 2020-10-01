@@ -5,11 +5,11 @@ from django.db import models
 
 
 class Gallery(models.Model):
-    name = models.CharField(max_length=200, null=True, blank=True)
-    descripton = models.TextField(max_length=200, null=True, blank=True)
+    name = models.CharField(max_length=400, null=True, blank=True)
+    descripton = models.TextField(max_length=400, null=True, blank=True)
     location = models.ForeignKey('location',on_delete=models.CASCADE)
     category = models.ForeignKey('categories',on_delete=models.CASCADE)
-    image = models.ImageField(upload_to = 'images/', null = True, blank = True)
+    image = models.ImageField(upload_to = 'vault/', null = True, blank = True)
     
     def __str__(self):
         return self.name
