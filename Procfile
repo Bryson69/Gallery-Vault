@@ -1,0 +1,1 @@
+web: gunicorn dgv1.wsgi --log-file -
