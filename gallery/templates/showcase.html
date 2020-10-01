@@ -10,6 +10,10 @@
         background-color: transparent;
     }
     
+    h1 {
+        color: snow;
+    }
+    
     h5 {
         color: snow;
         letter-spacing: 5px;
@@ -20,17 +24,16 @@
         text-decoration-style: wavy;
     }
 </style>
+
 <div class="container-fluid">
-    <div class="d-flex justify-content-start">
-        <h1 class="text-center my-5 ml-5" id="con" style="color: snow;">The Vault.</h1>
-    </div>
+
 
     <div class="d-flex justify-content-center">
-        <h1 class="text-center my-5" id="con" style="color: snow;">The Vault.</h1>
+        <h1 class="text-center my-5 animate__animated animate__fadeIn animate__fadeInDown" id="con">The Vault.</h1>
     </div>
     <div class="row">
         {% for image_item in images %}
-        <div class="col-sm-4  animate__animated animate__fadeIn animate__delay-2s">
+        <div class="col-sm-4 my-4 animate__animated animate__fadeIn animate__delay-1s animate__animated animate__fadeIn animate__fadeInUp">
             <div class="card" style="width: 25rem;" id="transparent">
                 <img src="{{ image_item.image.url }}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -40,4 +43,5 @@
 
             </div>
         </div>
+
         {% endfor %} {% endblock %}
