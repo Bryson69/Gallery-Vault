@@ -1,3 +1,6 @@
+import cloudinary
+from cloudinary.models import CloudinaryField
+
 from django.db import models
 
 # Create your models here.
@@ -8,7 +11,7 @@ class Gallery(models.Model):
     descripton = models.TextField(max_length=400, null=True, blank=True)
     location = models.ForeignKey('location',on_delete=models.CASCADE)
     category = models.ForeignKey('categories',on_delete=models.CASCADE)
-    image = models.ImageField(upload_to = 'vault/', null = True, blank = True)
+    image = CloudinaryField(default = 'default.jpg')
     
     def __str__(self):
         return self.name

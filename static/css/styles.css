@@ -1,7 +1,7 @@
 /* fonts */
-
 @import url("https://fonts.googleapis.com/css?family=Cute+Font|Merienda");
 @import url("https://fonts.googleapis.com/css?family=Akronim");
+/* Homepage */
 #particles-js {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/mountains.jpg);
     height: 95vh;

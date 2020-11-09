@@ -1,6 +1,8 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %} {% load cloudinary %} {% load static %} {% block content %}
 
 <style>
+    @import url("https://fonts.googleapis.com/css?family=Cute+Font|Merienda");
+@import url("https://fonts.googleapis.com/css?family=Akronim");
     .container-fluid {
         background-color: rgb(75, 70, 70);
         height: 480vh;
@@ -23,6 +25,17 @@
         -webkit-text-decoration-style: wavy;
         text-decoration-style: wavy;
     }
+
+#con {
+    text-shadow: snow;
+    letter-spacing: 5px;
+    font-family: 'Akronim';
+    text-decoration: underline;
+    -webkit-text-decoration-color: salmon;
+    text-decoration-color: rgb(139, 94, 88);
+    -webkit-text-decoration-style: wavy;
+    text-decoration-style: wavy;
+}
 </style>
 
 <div class="container-fluid">
