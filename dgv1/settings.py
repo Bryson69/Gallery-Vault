@@ -51,12 +51,6 @@ INSTALLED_APPS = [
     
 ]
 
-cloudinary.config(
-cloud_name = 'dhsczkkcm',
-api_key = '279462951163577',
-api_secret = 'Y8SHHPyfzJCK7Ncp1aHsG1-ea3E',
-)
-
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
